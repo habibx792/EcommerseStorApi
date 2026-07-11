@@ -1,0 +1,64 @@
+# Build folders
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code
+.vscode/
+
+# Rider
+.idea/
+
+# Logs
+*.log
+
+# NuGet
+*.nupkg
+*.snupkg
+
+# Test Results
+TestResults/
+
+# Publish
+publish/
+
+# Entity Framework
+*.dbmdl
+
+# Local databases
+*.mdf
+*.ldf
+
+# Secrets
+appsettings.Development.json
+secrets.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Coverage
+coverage/
+coverage.xml
+
+# Temporary files
+*.tmp
+*.temp
+
+# Package folders
+packages/
+
+# Generated files
+Generated/
+
+# Azure
+.publishsettings
+
+# Node modules (if you have a frontend)
+node_modules/
