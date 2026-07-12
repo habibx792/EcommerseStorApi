@@ -15,11 +15,5 @@ namespace ProjectClasses
         public ShipmentRider ShipmentRider { get; set; } = null!;
         public OrderStatus OrderStatus { get; set; }
     }
-    public class ShipmentRider : User
-    {
-        public string ShipmentCompany { get; set; } = string.Empty;
-
-        public ICollection<Order> Orders { get; set; } = new List<Order>();
-    }
 
 }

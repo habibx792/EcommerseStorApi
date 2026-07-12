@@ -15,6 +15,8 @@ namespace ProjectClasses
         public string Confirm { get;set; }
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
+        public int UserAddressId { get; set; }
+        public UserAddress Address { get; set; }
 
     }
 }

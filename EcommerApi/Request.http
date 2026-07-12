@@ -1,2 +1,28 @@
 ﻿
-GET https://localhost:7162;http://localhost:5131/Home
+GET http://localhost:5131/Home
+
+
+
+
+### ->Users Related Api Url/Endpoints
+###
+GET http://localhost:5131/User/GetUsers
+### Register
+GET http://localhost:5131/User/GetUsers/2
+###
+POST http://localhost:5131/User/Register
+Content-Type: application/json
+
+{
+  "name": "ALi Habib",
+  "password": "abcHabib234@abs",
+  "confirm": "abcHabib234@abs",
+  "email": "abc@gmail.com",
+  "phoneNumber": "03481561759",
+  "address": {
+    "country": "Pakistan",
+    "city": "Faisalabad",
+    "streetNumber": "123abc",
+    "postal_Code": "43732"
+  }
+}
