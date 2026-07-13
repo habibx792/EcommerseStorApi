@@ -10,17 +10,58 @@ namespace EcommerApi.Controllers
 
     [ApiController]
     [Route("User")]
-    public class UserController:ControllerBase
+    public class UserController : ControllerBase
     {
         private readonly ProjectDbContext context;
         public UserController(ProjectDbContext context)
         {
             this.context = context;
         }
+        [HttpDelete("DeleteUser/{id}")]
+
+        public async Task<ActionResult> DeleteUser(int id)
+        {
+            var user=await context.Users.FindAsync(id);
+            if (user == null)
+            {
+                Ok(new { message = "User Does not Exist" });
+            }
+            context.Users.Remove(user);
+            int row = await context.SaveChangesAsync();
+            return Ok(new { message = "User Has Been Deleted " });
+
+        }
+        public User getUserById(int id)
+        {
+            // Find() looks up by primary key directly and is highly optimized
+            var user = context.Users.Find(id);
+            return user;
+        }
+
+        [HttpPut("UpdateUser/{id}")]
+        public async Task<ActionResult> UpdateUser(User newUser, int id)
+        {
+            var user = getUserById(id);
+            if (user == null)
+            {
+                return Ok(new { message = "User Does Not Exist" });
+            }
+            //user.Id = newUser.Id;
+            user.Name = newUser.Name;
+            user.Email = newUser.Email;
+            user.Password = newUser.Password;
+            user.Confirm = user.Confirm;
+            user.ModifiedAt = DateTime.UtcNow;
+            await context.SaveChangesAsync();
+            return Ok(user);
+        }
+            
+
+        
         [HttpGet("GetUsers/{id}")]
         public async Task<ActionResult<User>>GetSpecificUser(int id)
         {
-            var user=context.Users.Where(u=>u.Id==id);
+            var user = getUserById(id);
             return Ok(user);
         }
         [HttpGet("GetUsers")]

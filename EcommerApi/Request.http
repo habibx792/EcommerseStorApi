@@ -2,12 +2,32 @@
 GET http://localhost:5131/Home
 
 
+###
+Put http://localhost:5131/User/UpdateUser/2
+Content-Type: application/json
 
+{
+  "name": "Hello Bello",
+  "password": "abcHabib234@abs",
+  "confirm": "abcHabib234@abs",
+  "email": "abc@gmail.com",
+  "phoneNumber": "03481561759",
+  "address": {
+    "country": "Pakistan",
+    "city": "Faisalabad",
+    "streetNumber": "123abc",
+    "postal_Code": "43732"
+  }
+}
 
 ### ->Users Related Api Url/Endpoints
 ###
 GET http://localhost:5131/User/GetUsers
-### Register
+### Register]
+### deleted
+DELETE http://localhost:5131/User/DeleteUser/2
+###
+
 GET http://localhost:5131/User/GetUsers/2
 ###
 POST http://localhost:5131/User/Register
