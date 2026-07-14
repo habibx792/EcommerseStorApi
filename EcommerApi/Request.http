@@ -3,7 +3,7 @@ GET http://localhost:5131/Home
 
 
 ###
-Put http://localhost:5131/User/UpdateUser/2
+Put http://localhost:5131/Home/User/UpdateUser/3
 Content-Type: application/json
 
 {
@@ -22,15 +22,15 @@ Content-Type: application/json
 
 ### ->Users Related Api Url/Endpoints
 ###
-GET http://localhost:5131/User/GetUsers
+GET http://localhost:5131/Home/User/GetUsers
 ### Register]
 ### deleted
-DELETE http://localhost:5131/User/DeleteUser/2
+DELETE http://localhost:5131/Home/User/DeleteUser/4
 ###
 
-GET http://localhost:5131/User/GetUsers/2
+GET http://localhost:5131/Home/User/GetUsers/3
 ###
-POST http://localhost:5131/User/Register
+POST http://localhost:5131/Home/User/Register
 Content-Type: application/json
 
 {

@@ -1,0 +1,18 @@
+﻿
+GET GET http://localhost:5131/Home/Proudcts
+
+
+###
+GET http://localhost:5131/Home/GetCategory
+###
+POST http://localhost:5131/Home/AddCategory
+Content-Type: application/json
+
+{
+  "Id": 0,
+  "CreatedAt": "2026-07-15T01:36:00Z",
+  "ModifiedAt": "2026-07-15T01:36:00Z",
+  "CategoryName": "Electronics"
+}
+
+

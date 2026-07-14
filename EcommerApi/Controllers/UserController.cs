@@ -9,7 +9,7 @@ namespace EcommerApi.Controllers
 {
 
     [ApiController]
-    [Route("User")]
+    [Route("Home/User")]
     public class UserController : ControllerBase
     {
         private readonly ProjectDbContext context;
