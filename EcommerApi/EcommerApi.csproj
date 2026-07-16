@@ -17,11 +17,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 	<ItemGroup>
-		<ProjectReference Include="D:\Programming\backend\Projects\EcommerApi\ProjectClasses\ProjectClasses.csproj"/>
+		<ProjectReference Include="D:\Programming\backend\Projects\EcommerApi\ProjectClasses\ProjectClasses.csproj" />
 	</ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Data\" />
     <Folder Include="Services\" />
   </ItemGroup>
 

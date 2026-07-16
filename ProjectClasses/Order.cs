@@ -10,9 +10,8 @@ namespace ProjectClasses
     {
         public int UserId { get; set; }
         public User User { get; set; } = null!;
-
-        public int ShipmentRiderId { get; set; }
-        public ShipmentRider ShipmentRider { get; set; } = null!;
+        public List<Product> Products { get; set; }
+        
         public OrderStatus OrderStatus { get; set; }
     }
 

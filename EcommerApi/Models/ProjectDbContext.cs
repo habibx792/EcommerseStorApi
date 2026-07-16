@@ -17,13 +17,17 @@ namespace EcommerApi.Models
                 .WithMany()
                 .HasForeignKey(u => u.UserId)
                 .OnDelete(DeleteBehavior.NoAction);
-            modelBuilder.Entity<Order>()
-                .HasOne(o=>o.ShipmentRider)
-                .WithMany()
-                .HasForeignKey(o=>o.ShipmentRiderId)
-                .OnDelete(DeleteBehavior.NoAction);
+            //modelBuilder.Entity<Order>()
+            //    .HasOne(o=>o.ShipmentRider)
+            //    .WithMany()
+            //    .HasForeignKey(o=>o.ShipmentRiderId)
+            //    .OnDelete(DeleteBehavior.NoAction);
             modelBuilder.Entity<OrderProduct>()
                 .HasKey(op=>new {op.OrderId, op.ProductId});
+            modelBuilder.Entity<OrderShipRider>()
+                .HasKey(sh => new { sh.ShipmentRiderId, sh.OrderId });
+            //modelBuilder.Entity<ShipmentRider>()
+            //    .has
         }
         public DbSet<Product> Products { get; set; }
         public DbSet<User> Users { get;set; }
@@ -33,6 +37,7 @@ namespace EcommerApi.Models
         public DbSet<Category> Categories { get; set; }
         public DbSet<ShipmentRider> ShipmentRiders { get; set; }
         public DbSet<OrderProduct> orderProducts { get; set; }
+        public DbSet<OrderShipRider> OrderShipRider { get; set; }
 
     }
 }

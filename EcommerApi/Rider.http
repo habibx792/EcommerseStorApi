@@ -1,0 +1,18 @@
+﻿
+POST http://localhost:5131/Home/RegisterRider
+Content-Type: application/json
+{
+  "name": "BSP Rider",
+  "password": "BspRider@123",
+  "confirm": "BspRider@123",
+  "email": "bsprider@gmail.com",
+  "phoneNumber": "03001234567",
+  "address": {
+    "country": "Pakistan",
+    "city": "Lahore",
+    "streetNumber": "House 25, Street 10",
+    "postal_Code": "54000"
+  },
+  "shipmentCompany": "BSP"
+}
+
